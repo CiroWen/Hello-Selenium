@@ -7,6 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.rmi.Remote;
+import java.util.List;
 
 /**
  * 1. Create two sets of test cases
@@ -48,9 +49,23 @@ public class Main {
         //driver2.findElement(By.linkText("Blouse")).click();
         //driver2.findElement(By.partialLinkText("Dress")).click();
 
-        //*** finds element by class ***
+        //*** finds element by className ***
         WebElement searchFieldByClass = driver2.findElement(By.className("search_query"));
         searchFieldByClass.sendKeys("testing input using By.className");
+
+        //*** finds element by tagName ***
+        List<WebElement> links = driver2.findElements(By.tagName("a"));
+        System.out.println(links.size());
+
+        //outputs the content of all <a> tags
+        //for(WebElement i : links){
+        //    System.out.println(i.getText());
+        //}
+
+        //*** finds element using css selector
+        WebElement womenTag = driver2.findElement(By.cssSelector("li>.sf-with-ul")); //returns the first matching element with className sf-with-ul
+        womenTag.click();
+
         //driver2.close();
 
     }

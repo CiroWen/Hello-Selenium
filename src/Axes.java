@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Axes {
     public static void main(String[] args) {
         //Open the Chrome browser
-        System.setProperty("webdriver.chrome.driver", "E://Selenium//drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", ".//drivers//chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         //Navigate to the URL

@@ -21,7 +21,7 @@ public class Test_scenarios2 {
 
     public static void main(String[] args){
         //1. Open the Edge browser
-        System.setProperty("webdriver.edge.driver", "E://Selenium//drivers//msedgedriver.exe"); //specifies the driver directory
+        System.setProperty("webdriver.edge.driver", ".//drivers//msedgedriver.exe"); //specifies the driver directory
         WebDriver driver = new EdgeDriver();
 
         //2. Navigate to the URL

@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
         //1. OPENS THE CHROME BROWSER
         //System.setProperty("webdriver.edge.driver", "E://Selenium//drivers//msedgedriver.exe"); //specifies the driver directory
-        System.setProperty("webdriver.chrome.driver", "E://Selenium//drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", ".//drivers//chromedriver.exe");
         //WebDriver driver = new EdgeDriver();
         WebDriver driver2 = new ChromeDriver();
         //extends SearchContext, get(), quit(), close(). getWindowHandle()

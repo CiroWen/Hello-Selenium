@@ -53,6 +53,13 @@ public class Xpath {
         WebElement searchBtn2 = driver.findElement(By.xpath(ebaySearchBtnXpathRel));
         searchBtn2.click();
 
+        //Conditional identifier
+        //Or operator, //input[@id='user-name' or @name='login btn'], returns nothing, both input that matches the condition or one of them.
+        //contains() //input[contains(@id,'user-na')]
+        //starts-with() //input[start-with(@id,'user-n')]
+        //text() //a[text()='username'] <a>username</a> //doesn't work with partial text
+
+
 
 
 

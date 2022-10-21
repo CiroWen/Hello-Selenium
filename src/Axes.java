@@ -29,7 +29,7 @@ public class Axes {
         System.out.println(mazdaNode.equals(selfNode));
 
         //Parent node
-        String parentNode = driver.findElement(By.xpath("//a[contains(.,'Mazda Ltd.')]/parent::td")).getText();
+        String parentNode = driver.findElement(By.xpath("//a[contains(.,'Mazda Ltd.')]/parent::")).getText();
         System.out.println(parentNode);
     }
 

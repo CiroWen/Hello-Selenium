@@ -1,7 +1,4 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
@@ -22,9 +19,12 @@ public class ShadowDOM {
 
         //Shadow dom
         JavascriptExecutor j = (JavascriptExecutor) driver;
-        WebElement shadowdom = (WebElement) j.executeScript("return arguments[0].shadowRoot",shadowHost);
+        SearchContext shadowdom = (SearchContext) j.executeScript("return arguments[0].shadowRoot",shadowHost);
 
-        //app-header
-        WebElement appheader = shadowdom.findElement(By.tagName("app-header"));
+        //search filed inside the shadow DOM
+        WebElement searchField = shadowdom.findElement(By.cssSelector("input#input"));
+        System.out.println(searchField.getTagName());
+        searchField.sendKeys("Selenium WebDriver");
+
     }
 }

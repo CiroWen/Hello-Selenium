@@ -17,7 +17,7 @@ import java.time.Duration;
  * 7. Verity Title (OrangeHRM)
  * 8. Close the browser
  */
-public class Test_scenarios2 {
+public class TestScenarios {
 
     public static void main(String[] args){
         //1. Open the Edge browser

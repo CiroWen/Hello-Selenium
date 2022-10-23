@@ -49,18 +49,10 @@ public class WebElementCommands {
         //isSelected() check if the element is selected
         Boolean isLoginBtnSelected = driver.findElement(By.xpath("//button[normalize-space()='Login']")).isSelected();
         System.out.println("is login button selected? " + isLoginBtnSelected);
-
-
-
-
     }
-
-
-
 
     /**
      * sendkeys with control + a then delete.
-     *
      * @param i WebElement
      */
     public static void inputClear(WebElement i) {

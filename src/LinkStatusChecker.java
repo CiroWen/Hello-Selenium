@@ -17,7 +17,7 @@ public class LinkStatusChecker {
         WebDriver driver = new ChromeDriver();
 
         //Navigate to the URL
-        String url = "https://www.uniuni.com/";
+        String url = "https://www.re-timer.com/";
         driver.get(url);
 
         //Links on home tag
@@ -31,7 +31,6 @@ public class LinkStatusChecker {
         for(String el : noDupLinks){
             verifyLinks(el);
         }
-
     }
 
     //method that verifies links
@@ -51,7 +50,4 @@ public class LinkStatusChecker {
             e.printStackTrace();
         }
     }
-
-
-
 }

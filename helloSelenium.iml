@@ -527,5 +527,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="net.lightbody.bmp.browsermob.core" level="project" />
   </component>
 </module>

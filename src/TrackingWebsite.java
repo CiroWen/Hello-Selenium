@@ -1,8 +1,10 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import net.lightbody.bmp.BrowserMobProxy;
+import net.lightbody.bmp.BrowserMobProxyServer;
+import net.lightbody.bmp.client.ClientUtil;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.IOException;
@@ -12,7 +14,19 @@ import java.net.URL;
 public class TrackingWebsite {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", ".//drivers//chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        // start the proxy
+        BrowserMobProxy proxy = new BrowserMobProxyServer();
+        proxy.start();
+
+        // get the Selenium proxy object
+        Proxy seleniumProxy = ClientUtil.createSeleniumProxy(proxy);
+
+        // configure it as a desired capability
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
+
+        //WebDriver driver = new ChromeDriver(capabilities);
+        //deprecated
 
         //Navigate to the URL
         String url = "https://www.uniuni.com/";
